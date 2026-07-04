@@ -1,0 +1,48 @@
+{
+	"color": {
+		"$type": "color",
+		"white": { "$value": "#ffffff" },
+		"black": { "$value": "#000000" },
+
+		"gray": {
+			"$description": "Neutral scale, scale-position named (smaller = lighter) so a theme can remap without the name lying. Build-time only — never emitted.",
+			"25":  { "$value": "#f7f8fa" },
+			"50":  { "$value": "#eef0f4" },
+			"100": { "$value": "#e2e5ec" },
+			"200": { "$value": "#cbd1dc" },
+			"300": { "$value": "#a7b0c0" },
+			"400": { "$value": "#7c8598" },
+			"500": { "$value": "#5b6474" },
+			"600": { "$value": "#3d4452" },
+			"700": { "$value": "#272c38" },
+			"800": { "$value": "#191d26" },
+			"900": { "$value": "#111317" },
+			"950": { "$value": "#0a0c10" }
+		},
+
+		"blue": {
+			"400": { "$value": "#5b8cff" },
+			"500": { "$value": "#2f6bff" },
+			"600": { "$value": "#1e4fd8" }
+		},
+		"purple": {
+			"500": { "$value": "#7c5cff" },
+			"600": { "$value": "#6a3fe6" }
+		},
+		"teal": {
+			"500": { "$value": "#159e93" }
+		},
+		"green": {
+			"500": { "$value": "#15b371" },
+			"600": { "$value": "#0f9d63" }
+		},
+		"red": {
+			"500": { "$value": "#e5484d" },
+			"600": { "$value": "#cf3438" }
+		},
+		"orange": {
+			"400": { "$value": "#f5b544" },
+			"500": { "$value": "#e5991a" }
+		}
+	}
+}

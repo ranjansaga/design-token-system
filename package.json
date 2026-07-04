@@ -1,0 +1,16 @@
+{
+	"name": "design-token-system",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Demo companion to the post “One Theme, Three Products, Zero Drift.” One token source → per-platform outputs, with the enforcement ladder that keeps humans and AI agents on the semantic layer.",
+	"scripts": {
+		"build": "pnpm -C packages/design-tokens build",
+		"lint:tokens": "eslint \"example/**/*.tsx\" --no-eslintrc -c .eslintrc.tokens.cjs --max-warnings 0",
+		"lint:tokens:count": "eslint \"example/**/*.tsx\" --no-eslintrc -c .eslintrc.tokens.cjs -f json | node -e \"let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const r=JSON.parse(d);const n=r.reduce((a,f)=>a+f.errorCount+f.warningCount,0);console.log('design-token violations in example/: '+n)})\""
+	},
+	"devDependencies": {
+		"@typescript-eslint/parser": "^7.18.0",
+		"eslint": "^8.57.0",
+		"typescript": "^5.5.0"
+	}
+}

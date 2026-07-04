@@ -1,0 +1,30 @@
+{
+	"$description": "Theme-independent scales (no light/dark variants). Authored directly at the semantic tier — colors are the only axis that needs a primitive layer. These groups exercise Decision 2: the source stays neutral (fontSize, spacing, radius) and each consumer's idiom is applied in a transform (Tailwind v4 sees fontSize as --text-*).",
+	"spacing": {
+		"$type": "dimension",
+		"1":  { "$value": "4px" },
+		"2":  { "$value": "8px" },
+		"3":  { "$value": "12px" },
+		"4":  { "$value": "16px" },
+		"6":  { "$value": "24px" },
+		"8":  { "$value": "32px" },
+		"12": { "$value": "48px" }
+	},
+	"radius": {
+		"$type": "dimension",
+		"sm":   { "$value": "6px" },
+		"md":   { "$value": "10px" },
+		"lg":   { "$value": "16px" },
+		"xl":   { "$value": "24px" },
+		"full": { "$value": "9999px" }
+	},
+	"fontSize": {
+		"$type": "dimension",
+		"xs":   { "$value": "12px" },
+		"sm":   { "$value": "14px" },
+		"body": { "$value": "16px" },
+		"lg":   { "$value": "20px" },
+		"xl":   { "$value": "28px" },
+		"2xl":  { "$value": "36px" }
+	}
+}

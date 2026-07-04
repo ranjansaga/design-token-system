@@ -1,0 +1,35 @@
+{
+	"color": {
+		"$type": "color",
+
+		"background":          { "$value": "{color.gray.950}", "$description": "App canvas." },
+		"foreground":          { "$value": "{color.gray.25}",  "$description": "Primary text / ink." },
+		"surface":             { "$value": "{color.gray.900}", "$description": "Raised panels, cards." },
+		"surface-2":           { "$value": "{color.gray.800}", "$description": "Nested / secondary panels, hover target." },
+		"surface-3":           { "$value": "{color.gray.700}", "$description": "Subtle fills, pressed state." },
+		"overlay":             { "$value": "rgba(0, 0, 0, 0.7)", "$extensions": { "literal": true }, "$description": "Modal backdrop / scrim." },
+
+		"border":              { "$value": "{color.gray.700}", "$description": "Hairline borders / dividers." },
+		"input":               { "$value": "{color.gray.800}", "$description": "Form field background." },
+
+		"muted-foreground":    { "$value": "{color.gray.400}", "$description": "Secondary text, labels." },
+		"subtle-foreground":   { "$value": "{color.gray.500}", "$description": "Tertiary / captions." },
+		"disabled-foreground": { "$value": "{color.gray.600}", "$description": "Disabled text." },
+
+		"primary":             { "$value": "{color.blue.500}", "$description": "Same as light — stays out of .dark." },
+		"primary-foreground":  { "$value": "{color.white}" },
+
+		"accent":              { "$value": "{color.blue.400}", "$description": "Brighter on the dark canvas." },
+		"accent-foreground":   { "$value": "{color.white}" },
+		"accent-purple":       { "$value": "{color.purple.500}" },
+		"accent-teal":         { "$value": "{color.teal.500}" },
+		"ring":                { "$value": "{color.blue.500}" },
+
+		"success":             { "$value": "{color.green.500}" },
+		"success-foreground":  { "$value": "{color.white}" },
+		"danger":              { "$value": "{color.red.500}" },
+		"danger-foreground":   { "$value": "{color.white}" },
+		"warning":             { "$value": "{color.orange.400}" },
+		"warning-foreground":  { "$value": "{color.gray.900}" }
+	}
+}

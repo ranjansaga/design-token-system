@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+*.log
+
+# dist/ is intentionally COMMITTED — consumers import it via relative path with no build step.
+# (That is why it is not ignored here.)
