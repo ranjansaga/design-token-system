@@ -1,11 +1,13 @@
 # AGENTS.md — design token rules
 
-> **Level 1 (weakest) enforcement: prose.** This file is loaded into an AI agent's context every
-> session (`AGENTS.md` by the cross-tool convention; `CLAUDE.md` in some repos). Prose *guides* — it
-> does not *enforce*. The ESLint guard (`.eslintrc.tokens.cjs`) is Level 2; primitives being
-> build-time-only is Level 3. **prose guides, lint enforces, architecture forecloses.**
+This file gets loaded into an AI agent's context every session (`AGENTS.md` by the cross-tool
+convention, `CLAUDE.md` in some repos). It's the weakest of the three enforcement layers: prose
+guides, but it can't actually stop anyone. The ESLint guard (`.eslintrc.tokens.cjs`) is the layer
+that stops you, and primitives being build-time-only is the layer where the mistake isn't even
+possible. Follow the rules here anyway, because it's cheaper for everyone if the lint never has to
+fire.
 
-All colors come from **semantic tokens**. Never hardcode a color, and never reach past the semantic
+All colors come from **semantic tokens**. Don't hardcode a color, and don't reach past the semantic
 layer into a raw scale.
 
 ### Use these
@@ -20,7 +22,7 @@ bg-accent   accent-purple  accent-teal     — interactive / secondary accents
 bg-success / bg-danger / bg-warning  (+ -foreground pairs)
 ```
 
-Spacing / radius / font-size come from the same source: `p-4`, `rounded-md`, `text-body`.
+Spacing, radius, and font-size come from the same source: `p-4`, `rounded-md`, `text-body`.
 
 ### Do NOT (the ESLint guard errors on every one of these)
 
@@ -52,6 +54,7 @@ series.set("fill", am5.color("#292929"));
 series.set("fill", am5.color(getCssVarColor("--color-surface-2", "#191d26")));
 ```
 
-**If no token fits the role you need, add one** to `packages/design-tokens/tokens/semantic/light.json`
-**and** `dark.json`, run `pnpm build`, then use the new `--color-*` var. Do not work around the
-system with a raw hex — that is exactly the drift this package exists to stop.
+If no token fits the role you need, add one to
+`packages/design-tokens/tokens/semantic/light.json` **and** `dark.json`, run `pnpm build`, then use
+the new `--color-*` var. Don't work around the system with a raw hex; that's exactly the drift this
+package exists to stop.
